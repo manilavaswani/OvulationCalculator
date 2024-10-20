@@ -1,0 +1,162 @@
+.container {
+    // display: flex;
+    // max-width: 1200px;
+    margin: 0 auto;
+    // padding: 20px;
+  }
+
+  h1, h2, h3 {
+    color: #ff69b4;
+  }
+
+  .contentstyle{
+  max-width: 800px;
+//   padding: 20px;
+  }
+
+  .introstyle{
+  max-width: 800px;
+  padding: 20px;
+
+  .intro-list {
+    background-color: #ffe0f0;
+    border-radius: 8px;
+    padding: 15px 15px 15px 35px;
+    margin: 20px 0;
+}
+ }
+
+ .phaseheader{
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+// .parallexslide
+// {
+//     background-image: url('/calculatebg.jpg');
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .summary{
+//   background-color: #fff0f5;
+// // background-color: white;
+//   border-radius: 8px;
+//   padding: 25px;
+//   margin-bottom: 30px;
+//   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+//    h2 {
+//     margin-top: 0;
+//    }
+
+//  ul {
+//     padding-left: 20px;
+// }
+// }
+
+// .parallexslide{
+//     background-image: url('/Pink Gradient.jpg');
+//     height: 100vh;
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+// .summarycontent {
+//     background-color: rgba(255, 255, 255, 0.8);
+//     color: #333;
+//     padding: 50px;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     max-width: 600px;
+//     width: 90%;
+//     border-radius: 10px;
+//     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+// }
+// h1 {
+//     color: #ff69b4;
+//     margin-bottom: 20px;
+// }
+// .summary {
+//     background-color: #fff0f5;
+//     border-radius: 8px;
+//     padding: 20px;
+//     margin-top: 20px;
+// }
+// .summary h2 {
+//     color: #ff69b4;
+//     margin-top: 0;
+// }
+// ul {
+//     padding-left: 20px;
+// }
+// li {
+//     margin-bottom: 10px;
+// }
+
+
+.parallax-slide {
+    // background-image: url('/Pink Gradient.jpg');
+    height: 25vh;
+    background-color: pink;
+    // background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content-wrapper {
+    background-color: rgba(255, 255, 255, 255);
+    padding: 40px;
+    margin: -100px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1600px;
+    width: 90%;
+  }
+  
+  .main-title {
+    color: #ff69b4;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    // text-align: center;
+    font-weight: bold;
+  }
+  
+  .summary-card {
+    background-color: #fff0f5;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 700px;
+    // margin: auto;
+  }
+  
+  .summary-title {
+    color: #ff69b4;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .summary-list {
+    padding-left: 20px;
+    
+    li {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+  }

@@ -1,0 +1,73 @@
+{
+    "title" : "The menstrual cycle",
+    "sections" : [
+
+        {
+            "id":"What-is-the-Menstrual-Cycle?",
+            "title":"What is the Menstrual Cycle?",
+            "content":"The menstrual cycle is a natural, yet intricate sequence of hormonal and physiological changes that a person’s body undergoes every month in preparation for the possibility of pregnancy. It is regulated primarily by fluctuations in hormone levels, especially estrogen and progesterone, which trigger the different phases of the cycle."
+        },
+        {
+            "id":"Phases-of-the-Menstrual-Cycle",
+            "title":"Phases of the Menstrual Cycle",
+            "content":"The menstrual cycle consists of four distinct phases that repeat roughly every month, preparing the body for the possibility of pregnancy. These phases are regulated by a balance of hormones, and each has a specific role in the reproductive process.",
+            "subsections" : [
+                {
+                    "id":"Your-Period",
+                    "title":"Menstruation (Your Period)"
+                },
+                {
+                    "id":"Follicular-Phase",
+                    "title":"Follicular Phase"
+                },
+                {
+                    "id":"Ovulation",
+                    "title":"Ovulation"
+                },
+                {
+                    "id":"Luteal-Phase",
+                    "title":"Luteal-Phase"
+                }
+            ]
+        },
+        {
+            "id":"When-to-See-Your-Doctor",
+            "title":"When to See Your Doctor",
+            "content":"While variations in the menstrual cycle are normal, certain changes or symptoms can indicate underlying health issues that may require medical attention. Here’s a detailed look at signs that you should discuss with your doctor:",
+            "subsections":[
+                { 
+                    "id":"Changes-in-period",
+                    "title":"Changes in Your Period Patterns"
+                },
+                {
+                    "id":"heavy-menstrual",
+                    "title":"Heavy Menstrual Bleeding (Menorrhagia)"
+                },
+                {
+                    "id":"Prolonged-Menstrual-Periods",
+                    "title":"Prolonged Menstrual Periods (More Than 8 Days)"
+                },
+                {
+                    "id":"Frequent-Periods",
+                    "title":"Frequent Periods (Less Than 21 Days Apart)"
+                },
+                {
+                    "id":"Infrequent-Periods",
+                    "title":"Infrequent Periods (More Than 2 to 3 Months Apart)"
+                },
+                {
+                    "id":"Painful-Periods",
+                    "title":"Painful Periods That Affect Your Quality of Life (Dysmenorrhea)"
+                },
+                {
+                    "id":"Bleeding-Between-Periods",
+                    "title":"Bleeding Between Periods"
+                },
+                {
+                    "id":"Bleeding-After-Sexual-Intercourse",
+                    "title":"Bleeding After Sexual Intercourse"
+                }
+            ]
+        }
+    ]
+}

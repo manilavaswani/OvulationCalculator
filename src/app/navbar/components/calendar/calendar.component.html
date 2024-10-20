@@ -1,0 +1,79 @@
+<div class="calendar-page"> 
+<header class="header-section">
+    <h1>Your Personalized Fertility Calendar</h1>
+    <p>Relax and discover your ovulation and fertile days with ease.</p>
+  </header>
+  <section class="input-section">
+    <h2>Enter Your Cycle Information</h2>
+        <form (ngSubmit)="calculateFertilityDays(formdata)" #formdata="ngForm">
+            <div class="form-group">
+              <label for="lastPeriodDate">First day of last period:</label>
+              <input type="date" id="lastPeriodDate" [(ngModel)]="lastPeriodDate" name="lastPeriodDate" required>
+            </div>
+            <div class="form-group">
+              <label for="cycleLengthDropdown">Your average cycle length:</label>
+              <select id="cycleLengthDropdown" [(ngModel)]="cycleLength" name="cycleLength" required>
+                <option *ngFor="let length of cycleLengths" [value]="length">{{length}} days</option>
+              </select>
+            </div>
+            <button type="submit" class="calculate-btn">Calculate Fertility Window</button>
+          </form>
+  </section>
+  <section class="results" *ngIf="showResults">
+    <i class="fa-solid fa-xmark" (click)="cancle()"></i>
+    <h2>Your Fertility Results</h2>
+    <!-- <div class="result-item"> -->
+        <div class="result-item">
+            <strong>Fertile Window:</strong> 
+            {{ formatDate(fertileDays.start) }} to {{ formatDate(fertileDays.end) }}
+          </div>
+          <div class="result-item">
+        <strong>Estimated Ovulation Day:</strong> 
+        {{formatDate(ovulationDate)}}
+      </div>
+      <div class="result-item">
+        <strong>Next Expected Period:</strong> 
+        {{formatDate(nextPeriodDay)}}
+      </div>
+      <div class="fertility-tips">
+        <h3>Fertility Tips:</h3>
+        <ul>
+          <li>The fertile window is when you're most likely to conceive.</li>
+          <li>Ovulation typically occurs 14 days before your next period.</li>
+          <li>The chances of getting pregnant are highest 2-3 days before ovulation and on the day of ovulation.</li>
+          <li>During the luteal phase, the chances of conception are very low if the egg wasn't fertilized during the fertile window.</li>
+        </ul>
+      </div>
+  </section>
+  <!-- <section class="tips-section">
+    <h2>Tips for Accurate Tracking</h2>
+    <ul>
+      <li>Track your basal body temperature for more precise ovulation prediction</li>
+      <li>Note changes in cervical mucus throughout your cycle</li>
+      <li>Use ovulation predictor kits for additional confirmation</li>
+    </ul>
+    <a routerLink="/learn" class="learn-more-link">Learn more about your fertility cycle</a>
+  </section> -->
+</div>
+<!-- <section class="tips-section">
+  <div class="tips-content">
+  <h2>Tips for Accurate Tracking</h2>
+  <ul>
+    <li>Track your basal body temperature for more precise ovulation prediction</li>
+    <li>Note changes in cervical mucus throughout your cycle</li>
+    <li>Use ovulation predictor kits for additional confirmation</li>
+  </ul>
+  <a routerLink="/learn" class="learn-more-link">Learn more about your fertility cycle</a>
+</div>
+</section> -->
+<div class="section tips-section">
+  <div class="tips-content">
+    <h2>Tips for Accurate Tracking</h2>
+    <ul class="tips-list">
+      <li>Track your basal body temperature for more precise ovulation prediction</li>
+      <li>Note changes in cervical mucus throughout your cycle</li>
+      <li>Use ovulation predictor kits for additional confirmation</li>
+    </ul>
+    <a href="/learn" class="learn-more-link">Learn more about your fertility cycle</a>
+  </div>
+</div>

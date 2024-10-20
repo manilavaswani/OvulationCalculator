@@ -1,0 +1,16 @@
+.error
+{
+    background-image: url('/error.jpg');
+    position: relative;
+    background-size: cover;
+    height: 80vh;
+    background-position: center;
+}
+
+.text-error{
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff4081;
+}

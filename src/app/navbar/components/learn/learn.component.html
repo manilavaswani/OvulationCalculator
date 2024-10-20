@@ -1,0 +1,175 @@
+<div class="container" *ngIf="cycleData">
+  <div class="stylediv"></div>
+    <main class="content">
+    
+      <div class="parallax-slide"> </div>
+        <div class="content-wrapper">
+          <h1 class="main-title">{{cycleData.title}}</h1>
+          <div class="summary-card">
+            <h2 class="summary-title">Summary</h2>
+            <ul class="summary-list">
+              <li>The menstrual cycle involves a monthly sequence of hormonal and physical changes in the body to prepare for a potential pregnancy.</li>
+              <li>The four main phases of the menstrual cycle are menstruation, the follicular phase, ovulation, and the luteal phase, each playing a distinct role in reproductive health.</li>
+              <li>By understanding your menstrual cycle, you can better track ovulation and fertility, helping you identify the most likely time for conception.</li>
+              <li>If you have concerns or irregularities with your period, it's important to consult a healthcare professional for guidance.</li>
+            </ul>
+          </div>
+        <!-- </div> -->
+     
+  
+      <!-- <div class="image-placeholder">
+        [Image of menstrual cycle phases or female reproductive system]
+      </div> -->
+     
+      <ng-container *ngFor="let section of cycleData.sections">
+        <section [id]="section.id" class="contentstyle">
+          <h2>{{ section.title }}</h2>
+          <p>{{ section.content }}</p>
+        </section>
+
+      <div class="introstyle">
+        <section *ngIf="section.id === 'What-is-the-Menstrual-Cycle?'">
+         <p>
+            Menstrual cycles are counted from the first day of one period to the day before the next period starts. While the average menstrual cycle is about 28 days, it can vary widely between individuals and can change at different life stages.
+        </p>
+            <ul class="intro-list">
+                <li>Adolescents and teenagers may experience longer cycles, sometimes up to 45 days, as their reproductive systems are still maturing.
+                </li>
+                <li>Adults in their 20s and 30s typically have more consistent cycles, ranging between 21 to 38 days.
+                </li>
+            </ul>
+        <p>
+            Factors like stress, diet, health conditions (such as polycystic ovary syndrome, or PCOS), and significant lifestyle changes can also impact the length and regularity of a menstrual cycle.
+            Understanding the menstrual cycle is crucial for reproductive health, as it not only influences menstruation but also dictates fertility windows, which are essential for those trying to conceive. It also provides key insights into overall health, as irregularities can signal underlying health conditions.
+         </p>
+         </section>
+         </div>
+
+         <section *ngIf="section.id === 'Phases-of-the-Menstrual-Cycle'">
+          <div class="phasesStyle">
+            <ng-container *ngFor="let subsection of section.subsections">
+                <h3 class="phaseheader">{{subsection.title}}</h3>
+                <section *ngIf="subsection.id === 'Your-Period'">
+                    <ul>
+                    <li>What happens: Menstruation is the phase during which the uterine lining (endometrium) sheds and exits the body through the vagina. This discharge includes blood, mucus, and cells from the lining of the uterus. Menstruation is triggered when the body realizes pregnancy has not occurred, causing a drop in hormone levels (primarily progesterone and estrogen).</li>
+                    <li>Duration: Typically lasts 3 to 7 days, though this can vary slightly between individuals. The heaviest bleeding generally occurs in the first 1-2 days, tapering off toward the end.</li>
+                    <li>Purpose: The shedding of the uterine lining clears the body’s reproductive system, resetting it for the next cycle.</li>
+                    </ul>
+                </section>
+                <section *ngIf="subsection.id === 'Follicular-Phase'">
+                    <ul>
+                    <li>What happens: The follicular phase begins on the first day of menstruation and lasts until ovulation (roughly 13-14 days). During this phase, the hormone follicle-stimulating hormone (FSH) is released from the brain (pituitary gland), signaling the ovaries to prepare follicles. These follicles are small sacs that contain immature eggs.</li>
+                        <ul>    
+                            <li>Typically, only one follicle will mature into an egg, while the others break down.</li>
+                            <li>Meanwhile, estrogen levels rise, causing the uterine lining to thicken and prepare for a possible pregnancy. This thickened lining will serve as a potential site for an embryo to implant.</li>
+                        </ul>
+                    <li>Duration: Around 13 to 14 days, but can vary depending on the individual and cycle length.</li> 
+                    </ul>
+                </section>
+                <section *ngIf="subsection.id === 'Ovulation'">
+                  <ul>
+                    <li>What happens: Ovulation occurs when the mature egg is released from the dominant follicle in the ovary into the fallopian tube, where it can potentially be fertilized by sperm. This event is triggered by a surge in luteinizing hormone (LH), which signals the ovary to release the egg. Ovulation generally occurs about midway through the cycle, around day 14 in a 28-day cycle, though this can vary based on the length of the cycle.</li>
+                    <li>Fertile Window: Ovulation marks the most fertile time in the cycle. The egg survives for about 12 to 24 hours, but sperm can live in the female reproductive system for up to 5 days, so the fertile window (the time when pregnancy is most likely) spans about 5 days before ovulation and 1 day after.</li>
+                    <li>Signs: Some individuals experience subtle signs like increased cervical mucus (thin, slippery texture) and mild pain on one side of the lower abdomen, known as mittelschmerz.</li>
+                  </ul>
+                </section>
+                <section *ngIf="subsection.id === 'Luteal-Phase'">
+                  <p>What happens: After ovulation, the empty follicle that released the egg transforms into a structure called the corpus luteum, which produces progesterone. Progesterone thickens the uterine lining further, making it ready for the implantation of a fertilized egg. This phase is called the luteal phase.
+                    <ul>
+                      <li>If fertilization occurs: The fertilized egg travels to the uterus, and implantation happens. The body will begin producing human chorionic gonadotropin (hCG), the hormone detected by pregnancy tests, which signals the corpus luteum to continue producing progesterone to sustain the pregnancy.</li>
+                      <li>If fertilization does not occur: The corpus luteum breaks down, leading to a drop in progesterone levels. This hormonal decline causes the uterine lining to shed, marking the start of a new menstrual cycle (i.e., your period).</li>
+                      </ul>
+                  Duration: The luteal phase typically lasts about 14 days, regardless of the total cycle length
+                </section>
+             </ng-container>
+             </div>
+         </section>
+
+         <section *ngIf="section.id === 'When-to-See-Your-Doctor'">
+          <ng-container *ngFor="let subsection of section.subsections">
+            <h3>{{subsection.title}}</h3>
+            <section *ngIf="subsection.id === 'Changes-in-period'">
+              <ul>
+                <li>What to look for: If you notice sudden or significant changes in the regularity, duration, or flow of your periods, it may indicate a problem.</li>
+                <ul>    
+                <li>For example, if your cycle becomes much shorter or longer than usual without an apparent reason (like stress or lifestyle changes), it’s worth checking with a healthcare provider.</li>
+                </ul>
+                <li>Possible causes: These changes may be linked to hormonal imbalances, thyroid disorders, polycystic ovary syndrome (PCOS), or even perimenopause (if you're approaching middle age).</li>
+              </ul>
+            </section>
+            <section *ngIf="subsection.id === 'heavy-menstrual'">
+              <ul>
+                <li>What to look for: Heavy periods are a cause for concern if you need to change your pad or tampon more frequently than every 1 to 2 hours for several consecutive hours or if you pass large blood clots.</li>
+                <ul>
+                  <li>You may also experience signs of anemia, such as fatigue, dizziness, or shortness of breath due to blood loss.</li>
+                </ul>
+                <li>Possible causes: Heavy bleeding can be caused by conditions such as uterine fibroids, endometriosis, adenomyosis, or a hormonal imbalance (e.g., too much estrogen or too little progesterone). It can also result from blood clotting disorders or the use of certain medications, like blood thinners.</li>
+              </ul>
+            </section>
+            <section *ngIf="subsection.id === 'Prolonged-Menstrual-Periods'">
+              <ul>
+                <li>What to look for: A normal period typically lasts between 3 and 7 days. If your periods consistently last longer than 8 days, this could be a sign of an underlying condition that needs medical evaluation.</li>
+                <li>Possible causes: Prolonged periods could be due to hormonal imbalances, uterine fibroids, polyps, or even infections. It may also be associated with pelvic inflammatory disease (PID) or the use of intrauterine devices (IUDs).</li>
+              </ul>
+            </section>
+            <section *ngIf="subsection.id === 'Frequent-Periods'">
+              <ul>
+                <li>What to look for: A typical menstrual cycle ranges from 21 to 35 days. If your periods are occurring less than 21 days apart, meaning you’re having more frequent periods than usual, this is abnormal and should be checked.</li>
+                <li>Possible causes: Frequent periods, known as polymenorrhea, can result from hormonal imbalances, thyroid issues, or PCOS. It could also be due to stress, extreme weight changes, or certain medications.</li>
+              </ul>
+            </section>
+            <section *ngIf="subsection.id === 'Infrequent-Periods'">
+              <ul>
+                <li>What to look for: If your periods occur more than 2 to 3 months apart and this is not typical for you, it may signal a problem with your reproductive health.</li>
+                <li>Possible causes: Infrequent periods, or oligomenorrhea, may be due to conditions like PCOS, thyroid dysfunction, hyperprolactinemia, excessive exercise, or significant weight loss. In some cases, it could indicate perimenopause or an issue with your ovaries.</li>
+              </ul>
+            </section>
+            <section *ngIf="subsection.id === 'Painful-Periods'">
+              <ul>
+                <li>What to look for: It’s common to experience some discomfort during your period, but if your symptoms are so severe that they disrupt your daily activities—such as missing work or school, or needing prescription pain medications—this is a red flag.</li>
+                <li>Possible causes: Severe period pain, known as dysmenorrhea, can be a sign of conditions like endometriosis, adenomyosis, uterine fibroids, or pelvic inflammatory disease (PID). These conditions often require medical treatment to manage symptoms effectively.</li>
+              </ul>
+            </section>
+            <section *ngIf="subsection.id === 'Bleeding-Between-Periods'">
+              <ul>
+                <li>What to look for: Bleeding or spotting between periods—also known as intermenstrual bleeding—is not normal, especially if it happens frequently.</li>
+                <li>Possible causes: This can be caused by several factors, including hormonal fluctuations, uterine polyps, fibroids, infections, or even precancerous or cancerous conditions of the reproductive organs. Ovulation bleeding (light spotting around the time of ovulation) is generally harmless, but persistent or heavy bleeding between periods requires investigation.</li>
+              </ul>
+            </section>
+            <section *ngIf="subsection.id === 'Bleeding-After-Sexual-Intercourse'">
+              <ul>
+                <li>What to look for: Bleeding after intercourse, known as postcoital bleeding, is another reason to consult a doctor. While occasional light spotting may be harmless, especially after vigorous intercourse, regular or heavy bleeding after sex should be investigated.</li>
+                <li>Possible causes: Postcoital bleeding can be a sign of cervical issues, such as cervical polyps, infections, or cervical dysplasia (abnormal cells that could lead to cervical cancer). It may also be due to vaginal atrophy (thinning and dryness of the vaginal walls, common in postmenopausal women) or sexually transmitted infections (STIs).</li>
+              </ul>
+            </section>
+          </ng-container>
+         </section>
+   
+          <!-- <ul *ngIf="section.bulletPoints">
+            <li *ngFor="let point of section.bulletPoints">{{ point }}</li>
+          </ul> -->
+  
+          <!-- <ng-container *ngIf="section.subSections">
+            <div *ngFor="let subSection of section.subSections">
+              <h3>{{ subSection.title }}</h3>
+              <p>{{ subSection.content }}</p>
+              <p *ngIf="subSection.duration"><strong>Duration:</strong> {{ subSection.duration }}</p>
+              <p *ngIf="subSection.purpose"><strong>Purpose:</strong> {{ subSection.purpose }}</p>
+            </div>
+          </ng-container> -->
+      
+      </ng-container>
+    </div>
+    </main>
+  
+    <!-- <aside class="sidebar">
+      <div class="toc">
+        <h3>On this page</h3>
+        <ul>
+          <li *ngFor="let section of cycleData.sections">
+            <a [href]="'#' + section.id">{{ section.title }}</a>
+          </li>
+        </ul>
+      </div>
+    </aside> -->
+  </div>
