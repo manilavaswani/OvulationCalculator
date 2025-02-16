@@ -1,0 +1,43 @@
+<section class="alert-signup-section">
+      <div class="container">
+        <h2 class="section-heading">Want to Get Notified Before Your Next Period?</h2>
+        
+        <form [formGroup]="reminderdata"  (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email"
+              placeholder="Enter your email"
+              [class.is-invalid]="email?.invalid && email?.touched"
+
+            >
+            <div class="error-message" *ngIf="email?.invalid && email?.touched">
+              Please enter a valid email address
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastPeriod">Last Period Start Date</label>
+            <input 
+              type="date" 
+              id="lastPeriod" 
+              formControlName="lastPeriod"
+              [class.is-invalid]="lastPeriod?.invalid && lastPeriod?.touched"
+            >
+            <div class="error-message" *ngIf="lastPeriod?.invalid && lastPeriod?.touched">
+              Please select your last period date
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="!reminderdata.valid">Get Period Alerts</button>
+        </form>
+
+        <p class="disclaimer">
+          Note: Period cycles can vary naturally. Your next period may arrive up to a week 
+          earlier or later than predicted. We'll send you a reminder 4 days before your 
+          expected date.
+        </p>
+      </div>
+    </section>
