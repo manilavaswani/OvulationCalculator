@@ -1,0 +1,151 @@
+
+  .faq-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    // background-color: #8d4d4d !important;
+    // background-image: url('/calculatebg.jpg');
+    background: linear-gradient(135deg, #ffe5f0, #fff0f5, #e6f3ff);
+    min-height: calc(100vh - 64px);
+  }
+
+  .faq-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h2 {
+        color: #e91e63;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    
+  .faq-title {
+    color: #ff4081;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .faq-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff4081 0%, #ff80ab 100%);
+    border-radius: 2px;
+  }
+
+  .custom-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .custom-panel {
+    background: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease;
+    border: 1px solid #f3f3f3 !important;
+  }
+
+  .custom-panel:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-2px);
+  }
+
+  .custom-header {
+    padding: 24px !important;
+    background: white !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+  }
+
+  mat-panel-title {
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-right: 40px;
+  }
+
+  .expand-icon {
+    position: absolute;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .plus, .minus {
+    position: absolute;
+    color: #ff4081;
+    font-size: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .minus {
+    opacity: 0;
+  }
+
+  .mat-expanded .plus {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  .mat-expanded .minus {
+    opacity: 1;
+  }
+
+  .answer-content {
+    color: #666;
+    line-height: 1.8;
+    padding: 0 24px 24px;
+    font-size: 15px;
+  }
+
+  /* Animation for panel expansion */
+  ::ng-deep .mat-expansion-panel-body {
+    padding: 0 !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  ::ng-deep .mat-expansion-panel-content {
+    visibility: visible !important;
+  }
+
+  @media (max-width: 768px) {
+    .faq-wrapper {
+      max-width: 100%;
+      padding: 20px 16px;
+      min-height: 100vh;
+    }
+
+    .faq-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .custom-header {
+      padding: 16px !important;
+    }
+
+    mat-panel-title {
+      font-size: 15px;
+    }
+
+    .answer-content {
+      padding: 0 16px 16px;
+      font-size: 13px;
+    }
+  }

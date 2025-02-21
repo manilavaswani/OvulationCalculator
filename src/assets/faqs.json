@@ -1,0 +1,31 @@
+[
+    {
+      "question": "What is a normal menstrual cycle length?",
+      "answer": "A normal menstrual cycle typically ranges from 21-35 days, with 28 days being average. However, cycle lengths can vary between individuals and even from month to month. If your cycles are consistently shorter than 21 days or longer than 35 days, consult your healthcare provider"
+    },
+    {
+      "question": "Why does my cycle length vary sometimes?",
+      "answer": "Cycle length can vary due to several factors including stress, significant weight changes, intense exercise, illness, travel, or hormonal fluctuations. Some variation is normal, but consistent irregular cycles should be discussed with your doctor."
+    },
+    {
+        "question": "When do I typically ovulate in my cycle?",
+        "answer" : "Ovulation usually occurs about 14 days before your next period starts. For a 28-day cycle, this would be around day 14. However, this can vary significantly, especially if you have longer or shorter cycles."
+    },
+    {
+        "question":"What are signs of ovulation?",
+        "answer":"<p>Common ovulation signs include:</p><ul><li>Changes in cervical mucus (becoming clearer and more stretchy)</li><li>Slight rise in basal body temperature</li><li>Mild cramping on one side (mittelschmerz)</li><li>Increased sex drive</li></ul>"
+    },
+    {
+        "question":"What are my most fertile days",
+        "answer":"The fertile window typically includes the 5 days before ovulation and the day of ovulation itself. The two days before ovulation are usually the most fertile."
+    },
+    {
+        "question":"Can I get pregnant during my period?",
+        "answer":"While it's less likely, pregnancy is possible during menstruation, especially if you have short cycles or irregular periods. Sperm can survive in the body for up to 5 days."
+    },
+    {
+        "question":"When should I see a doctor about my cycle?",
+        "answer":"<p>Consult a healthcare provider if you experience:</p><ul><li>Periods lasting longer than 7 days</li><li>Very heavy bleeding (soaking through a pad/tampon every 1-2 hours)</li><li>Severe pain that interferes with daily activities</li><li>No period for 3+ months (if not pregnant)</li><li>Bleeding between periods</li><li>Significant changes in your cycle</li>"
+    }
+  ]
+  

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,5 +9,19 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+ isMenuOpen : boolean = false;
 
+ togglebtn(){
+  this.isMenuOpen = !this.isMenuOpen;
+ }
+
+ @HostListener('document:click',['$event'])
+ closeevent(event:Event){
+const target = event.target as HTMLElement;
+const isInsideNavbar = target.closest('.navbar-container');
+console.log(isInsideNavbar);
+if (!isInsideNavbar) {
+  this.isMenuOpen = false;
+}
+ }
 }

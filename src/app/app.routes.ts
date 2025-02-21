@@ -9,7 +9,7 @@ import { NotFoundComponent } from './navbar/components/not-found/not-found.compo
 export const routes: Routes = [
     {path:'', component:HomeComponent},
     {path:'calendar', component:CalendarComponent},
-    {path:'insights', component:InsightsComponent},
+    {path:'faqs', component:InsightsComponent},
     {path:'learn', component:LearnComponent},
     {path:'track', component:TrackComponent},
     {path:'**', component:NotFoundComponent}

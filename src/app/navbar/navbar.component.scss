@@ -1,48 +1,97 @@
 .navbar {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 2rem;
-  
-    .navbar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-  
-    .navbar-logo {
-      color: #ff4081;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.3s ease;
-  
-      &:hover {
-        color: #c51162;
-      }
-    }
-  
-    .navbar-menu {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      cursor: pointer;
-  
-      li {
-        margin-left: 1.5rem;
-  
-        a {
-          color: #333;
-          text-decoration: none;
-          font-weight: 500;
-          transition: color 0.3s ease;
-  
-          &:hover, &.active {
-            color: #ff4081;
-          }
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .navbar-logo {
+    color: #ff4081;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+    li {
+      margin-left: 1.5rem;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &.active {
+          color: #ff4081;
         }
       }
     }
   }
+
+  /* Hamburger Menu Button */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #ff4081;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+      background-color: #ff80ab;
+      color: white;
+      border-radius: 8px;
+      padding: 5px 10px;
+    }
+
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: white;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-menu.open {
+      display: flex;
+      transform: translateY(0);
+      z-index: 1;
+    }
+
+    .navbar-menu li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu li:last-child {
+      border-bottom: none;
+    }
+  }
+}
