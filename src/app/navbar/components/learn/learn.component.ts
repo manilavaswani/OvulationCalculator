@@ -27,6 +27,15 @@ export class LearnComponent implements OnInit {
 
   }
 
+  scrolltillsection(id:string){
+const element=document.getElementById(id);
+if(element){
+  element.scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start' 
+  });
+}
+  }
   // Fix 1: Correct method name to match the decorator
   // @HostListener('window:scroll', ['$event'])
   // onWindowScroll() {  // Fix 2: Method name was "onWindowsScroll" with an extra 's'

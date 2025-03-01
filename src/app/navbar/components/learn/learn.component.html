@@ -1,22 +1,32 @@
 <div class="parallax-container">
   <div class="hero-section" #heroSection>
+    <h1 class="heroStyle">The Menstrual Cycle</h1>
     <div class="hero-content">
-      <h1>The Menstrual Cycle</h1>
+      
       <div class="summary-card">
         <h2>Summary</h2>
-        <ul>
+        <ul class="summarystyle">
           <li>The menstrual cycle involves a monthly sequence of hormonal and physical changes in the body to prepare for a potential pregnancy.</li>
           <li>The four main phases of the menstrual cycle are menstruation, the follicular phase, ovulation, and the luteal phase, each playing a distinct role in reproductive health.</li>
           <li>By understanding your menstrual cycle, you can better track ovulation and fertility, helping you identify the most likely time for conception.</li>
           <li>If you have concerns or irregularities with your period, it's important to consult a healthcare professional for guidance.</li>
         </ul>
       </div>
+        <div class="navigation-card">
+          <h2>On this page</h2>
+          <ul class="navigationlink">
+            <li><button class="sectionstyl" (click)="scrolltillsection('section-1')">What is the menstrual cycle?</button></li>
+              <li><button class="sectionstyl" (click)="scrolltillsection('section-2')">Phases of the menstrual cycle</button></li>
+              <!-- <li>More information</li> -->
+              <li><button class="sectionstyl" (click)="scrolltillsection('section-4')">Period Reminder</button></li>
+          </ul>
+      </div>
     </div>
   </div>
 
   
   <div class="content-section">
-    <div class="content-wrapper">
+    <div id="section-1" class="content-wrapper">
       <h2>What is the Menstrual Cycle?</h2>
       <p>The menstrual cycle is a natural, intricate sequence of hormonal and physiological changes that a person's body undergoes every month in preparation for the possibility of pregnancy. It is regulated primarily by fluctuations in hormone levels, especially estrogen and progesterone, which trigger the different phases of the cycle.</p>
       <p>Menstrual cycles are counted from the first day of one period to the day before the next period starts. While the average menstrual cycle is about 28 days, it can vary widely between individuals and can change at different life stages.</p>
@@ -33,7 +43,7 @@
   
 
   <div class="phases-section">
-    <div class="phases-content">
+    <div id="section-2" class="phases-content">
       <div class="phases-heading">
       <h2>Phases of Menstrual Cycle</h2>
       </div>
@@ -59,18 +69,20 @@
             <p>After ovulation, the luteal phase begins. The body prepares for possible pregnancy. If fertilization doesn't occur, hormone levels drop and the cycle begins again.</p>
           </div>
         </div>
-        
-        <!-- <div class="decorative-circles">
-          <div class="circle circle-1"></div>
-          <div class="circle circle-2"></div>
-          <div class="circle circle-3"></div>
-          <div class="circle circle-4"></div>
-        </div> -->
       </div>
     </div>
   </div>
 
-  <div class="reminder-phase">
+ 
+  <div id="section-4" class="reminder-phase">
+    <div class="faq-section">
+      <div class="overlay"></div>
+      <div class="faq-content">
+        <h1 class="faqheadingstyle">Have Questions About Your Fertility?</h1>
+        <p>Find answers to your most common questions about ovulation, fertility tracking, and more.</p>
+        <button routerLink="/faqs" class="buttonStyle">Get Your Answers Now</button>
+      </div>
+    </div>
   <app-reminder></app-reminder>
   </div>
 </div>
